@@ -11,7 +11,7 @@ require_relative 'app/controllers/users_controller'
 
 use Rack::MethodOverride
 
-use DestinationController
-use ListController
-use UserController
+use DestinationsController
+use ListsController
+use UsersController
 run ApplicationController
