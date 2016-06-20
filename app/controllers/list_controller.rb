@@ -1,3 +1,0 @@
-class ListController < ApplicationController
-  
-end

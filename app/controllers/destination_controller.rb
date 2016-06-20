@@ -1,3 +1,0 @@
-class DestinationController < ApplicationController
-  
-end
