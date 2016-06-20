@@ -1,10 +1,10 @@
 # Canoe - A Trip Planner Sinatra App
 
-This is a CRUD application built with Sinatra's framework.
+This is a fully functional CRUD application built with Sinatra's framework.
 
 ## Overview
 
-Canoe is a simplified trip planning application that allows users to create trips and make lists for those trips. The user will be able to create an account and have the ability to save or modify there own respective lists. This application is meant to create easy and simple lists, such as a packing list and itinerary, for there travel plans.
+Canoe is a simplified trip planning application that allows users to create and plan there trips. The user will be able to create an account and have the ability to save or modify there own respective plans. This application is meant to create easy and simple lists, such as a packing list and itinerary, for there travel plans.
 
 ## Contributing
 
