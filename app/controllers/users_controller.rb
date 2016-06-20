@@ -13,7 +13,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect '/destinations/index'
     else
-      erb :'/users/signup', locals: {message: "Something seems to be wrong/missing. Please try again."}
+      erb :'/users/signup', locals: {message: "There seems to be an error. Please try again."}
+    end
   end
 
   get '/login' do
@@ -26,7 +27,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect '/destinations/index'
     else
-      erb :'/users/login', locals: {message: "Email or password is incorrect. Please try again."}
+      erb :'/users/login', locals: {message: "There seems to be an error. Please try again."}
     end
   end
 
@@ -38,4 +39,5 @@ class UsersController < ApplicationController
       redirect '/destinations/index'
     end
   end
+
 end
