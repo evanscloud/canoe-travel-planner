@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
     if is_logged_in?
-      erb :'destinations/show'
+      erb :'destinations/index'
     else
       erb :index
     end
