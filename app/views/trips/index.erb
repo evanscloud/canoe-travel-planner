@@ -4,6 +4,8 @@
 
 <ul>
   <% @trips.each do |trip| %>
-    <li><a href="/trips/<%= trip.id %>"><%= trip.name %>, <%= trip.location %></a></li>
+    <% if trip.user_id == session[:user_id] %>
+      <li><a href="/trips/<%= trip.id %>"><%= trip.name %>, <%= trip.location %></a></li>
+    <% end %>
   <% end %>
 </ul>
