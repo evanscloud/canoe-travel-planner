@@ -4,15 +4,15 @@
   <%= message %>
 <% end %>
 <br>
-<button type="button" name="edit_content"><a href="/trips/<%= @list.destination_id %>/lists/<%= @list.id %>/edit">Edit List</a></button>
+<button type="button" name="edit_content"><a href="/trips/<%= @list.trip_id %>/lists/<%= @list.id %>/edit">Edit List</a></button>
 
 <p>
   <%= @list.content %>
 </p>
 
-<form action="/lists/<%= @list.id %>/delete" method="post">
+<form action="/trips/<%= @list.trip_id %>/lists/<%= @list.id %>/delete" method="post">
   <input type="hidden" id="hidden" name="_method" value="delete">
   <input type="submit" value="Delete List">
 </form>
 
-<button type="button" name="return_to_trips"><a href="/trips/<%= @list.destination_id %>">Return to Trip</a></button>
+<button type="button" name="return_to_trips"><a href="/trips/<%= @list.trip_id %>">Return to Trip</a></button>
