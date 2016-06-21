@@ -1,0 +1,15 @@
+<h3>Create a Trip Destination Below:</h3>
+
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+<br><br>
+<form action="/destinations" method="post">
+  <label for="name">Destination Name: </label>
+  <input type="text" name="name" placeholder="name">
+  <br><br>
+  <label for="name">Destination Location: </label>
+  <input type="text" name="location" placeholder="location">
+  <br><br>
+  <input type="submit" value="Create Destination">
+</form>

@@ -1,0 +1,9 @@
+<h2>Your Destinations</h2>
+
+<button type="button"><a href="/destinations/new">Create a New Destination</a></button>
+
+<ul>
+  <% @destinations.each do |destination| %>
+    <li><a href="/destinations/<%= destination.id %>"><%= destination.name %>, <%= destination.location %></a></li>
+  <% end %>
+</ul>
