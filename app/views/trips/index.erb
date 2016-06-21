@@ -1,0 +1,9 @@
+<h2>Your Trips</h2>
+
+<button type="button"><a href="/trips/new">Create a New Destination</a></button>
+
+<ul>
+  <% @trips.each do |trip| %>
+    <li><a href="/trips/<%= trip.id %>"><%= trip.name %>, <%= trip.location %></a></li>
+  <% end %>
+</ul>

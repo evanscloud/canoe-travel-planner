@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   get '/signup' do
     if is_logged_in?
-      redirect '/destinations'
+      redirect '/trips'
     else
       erb :'/users/signup'
     end
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(username: params[:username], email: params[:email], password: params[:password])
     if @user.save
       session[:user_id] = @user.id
-      redirect '/destinations'
+      redirect '/trips'
     else
       erb :'/users/signup', locals: {message: "There seems to be an error. Please try again."}
     end
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     if !is_logged_in?
       erb :'/users/login'
     else
-      redirect '/destinations'
+      redirect '/trips'
     end
   end
 
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect '/destinations'
+      redirect '/trips'
     else
       erb :'/users/login', locals: {message: "There seems to be an error. Please try again."}
     end
@@ -38,9 +38,9 @@ class UsersController < ApplicationController
   get '/logout' do
     if is_logged_in?
       session.clear
-      redirect 'index'
+      redirect '/'
     else
-      redirect '/destinations'
+      redirect '/trips'
     end
   end
 

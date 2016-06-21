@@ -1,0 +1,17 @@
+<h2>Edit Your Trip</h2>
+
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+<br><br>
+<form action="/trips/<%= @trip.id %>" method="post">
+  <input type="hidden" id="hidden" name="_method" value="patch">
+
+  <label for="name">Trip Name: </label>
+  <input type="text" name="name" value="<% @trip.name %>" placeholder="name">
+  <br><br>
+  <label for="location">Trip Location: </label>
+  <input type="text" name="location" value="<% @trip.location %>" placeholder="location">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>

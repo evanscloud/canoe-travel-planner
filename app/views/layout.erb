@@ -5,14 +5,26 @@
     <title>Canoe - Personal Travel Planner</title>
   </head>
 
-  <!-- add nav -->
+  <nav>
+    <ul>
+      <% if is_logged_in? %>
+
+        <li><a href="/trips">Trips</a></li>
+        <li><a href="/logout">Log-Out</a></li>
+      <% else %>
+        <li><strong>Canoe</strong></li>
+        <li><a href="/login">Log-In</a></li>
+        <li><a href="/signup">Sign-Up</a></li>
+      <% end %>
+    </ul>
+  </nav>
 
   <body>
 
     <div class="container">
 
       <%= yield %>
-      
+
     </div>
 
     <!-- bootstrap? -->

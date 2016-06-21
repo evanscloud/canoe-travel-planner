@@ -3,7 +3,7 @@ class CreateLists < ActiveRecord::Migration
     create_table :lists do |t|
       t.string :title
       t.string :content
-      t.integer :destination_id
+      t.integer :trip_id
     end
   end
 end

@@ -1,0 +1,18 @@
+<h2>Edit <%= @list.title %> For <%= @list.trip.name %>, <%= @list.trip.location %></h2>
+
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+<br>
+<form action="trips/<%= @list.trip_id %>/lists/<% @list.id %>" method="post">
+  <input type="hidden" id="hidden" name="_method" value="patch">
+  <br><br>
+  <label for="title">Title: </label>
+  <input type="text" name="<%= @list.title %>" placeholder="title">
+  <br><br>
+  <label for="content">Content: </label>
+  <br>
+  <textarea name="<%= @list.content %>" rows="20" cols="100"></textarea>
+  <br><br>
+  <input type="submit" value="Update List">
+</form>

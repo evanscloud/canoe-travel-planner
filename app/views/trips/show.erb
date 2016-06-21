@@ -1,0 +1,21 @@
+<h2>Trip Name: <%= @trip.name %></h2>
+<h3>Location: <%= @trip.location %></h3>
+
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+<br><br>
+<button type="button" name="edit_trip"><a href="/trips/<%= @trip.id %>/edit">Edit Trip</a></button>
+
+<button type="button" name="create_list"><a href="/trips/<%= @trip.id %>/lists/new">Create a New List</a></button>
+
+<ul>
+  <% @trip.lists.each do |list| %>
+    <li><a href="/lists/<%= list.id %>"><%= list.title %></a></li>
+  <% end %>
+</ul>
+
+<form action="/trips/<%= @trip.id %>/delete" method="post">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Trip">
+</form>
