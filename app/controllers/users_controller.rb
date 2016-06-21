@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   get '/logout' do
     if is_logged_in?
       session.clear
-      redirect '/'
+      erb :'/index'
     else
       redirect '/trips'
     end

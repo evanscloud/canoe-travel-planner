@@ -11,7 +11,7 @@
 
 <ul>
   <% @trip.lists.each do |list| %>
-    <li><a href="/lists/<%= list.id %>"><%= list.title %></a></li>
+    <li><a href="/trips/<%= list.trip_id %>/lists/<%= list.id %>"><%= list.title %></a></li>
   <% end %>
 </ul>
 

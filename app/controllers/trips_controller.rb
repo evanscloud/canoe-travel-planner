@@ -2,8 +2,12 @@ class TripsController < ApplicationController
 
   get '/trips' do
     if is_logged_in?
-      @trips = Trip.all
-      erb :'/trips/index'
+      if User.exists?(id: session[:user_id])
+        @trips = Trip.all
+        erb :'/trips/index'
+      else
+        erb :'/trips/new'
+      end
     else
       erb :'/users/login', locals: {message: "Access denied. Please log-in to view."}
     end
