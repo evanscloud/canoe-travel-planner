@@ -3,15 +3,11 @@ class ApplicationController < Sinatra::Base
   configure do
     set :views, 'app/views'
     enable :sessions
-    set :sessions_secret, "chinchilla"
+    set :session_secret, "chinchilla"
   end
 
   get '/' do
-    if is_logged_in?
-      erb :'destinations/index'
-    else
-      erb :index
-    end
+    erb :index
   end
 
   helpers do
