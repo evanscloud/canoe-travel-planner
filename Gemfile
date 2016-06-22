@@ -10,8 +10,8 @@ gem 'thin'
 gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
-gem "tux"
-gem 'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
+gem 'tux'
+gem 'erubis'
 
 group :test do
   gem 'rspec'

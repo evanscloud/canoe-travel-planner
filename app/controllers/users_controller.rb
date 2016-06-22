@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   get '/signup' do
     if is_logged_in?
       redirect '/trips'
@@ -36,12 +37,8 @@ class UsersController < ApplicationController
   end
 
   get '/logout' do
-    if is_logged_in?
-      session.clear
-      erb :'/index'
-    else
-      redirect '/trips'
-    end
+    session.clear
+    erb :'/index'
   end
 
 end

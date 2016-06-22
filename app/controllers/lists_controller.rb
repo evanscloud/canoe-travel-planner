@@ -1,4 +1,5 @@
 class ListsController < ApplicationController
+
   get '/trips/:id/lists/new' do
     if is_logged_in?
       @trip = Trip.find(params[:id])
