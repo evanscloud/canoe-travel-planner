@@ -2,32 +2,76 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Travel planning app built with Sinatra">
+    <meta name="author" content="Evan Ng">
+
     <title>Canoe - Personal Travel Planner</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/custom-style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
-
-  <nav>
-    <ul>
-      <% if is_logged_in? %>
-
-        <li><a href="/trips">Trips</a></li>
-        <li><a href="/logout">Log-Out</a></li>
-      <% else %>
-        <li><strong>Canoe</strong></li>
-        <li><a href="/login">Log-In</a></li>
-        <li><a href="/signup">Sign-Up</a></li>
-      <% end %>
-    </ul>
-  </nav>
 
   <body>
 
-    <div class="container">
+    <div class="site-wrapper">
 
-      <%= yield %>
+      <div class="site-wrapper-inner">
 
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Canoe</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <% if is_logged_in? %>
+                    <li class="active"><a href="/trips">Trips</a></li>
+                    <li><a href="/logout">Log-Out</a></li>
+                  <% else %>
+                    <li class="active"><a href="/login">Log-In</a></li>
+                    <li><a href="/signup">Sign-Up</a></li>
+                  <% end %>
+                </ul>
+              </nav>
+            </div>
+          </div><!-- nav -->
+
+          <div class="container-fluid">
+
+            <%= yield %>
+
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>App created using <a href="http://www.sinatrarb.com/" style="color: #ffffff" target="_blank">Sinatra</a>, by <a href="http://www.evanscloud.com" style="color: #ffffff" target="_blank">Evan Ng</a>.</p>
+            </div>
+          </div><!-- footer -->
+        </div>
+      </div>
     </div>
 
-    <!-- bootstrap? -->
-  </body>
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
