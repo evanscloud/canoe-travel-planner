@@ -5,17 +5,17 @@
   <%= message %>
 <% end %>
 <br><br>
-<button type="button" name="edit_trip"><a href="/trips/<%= @trip.id %>/edit">Edit Trip</a></button>
+<button type="button" class="btn btn-default" name="edit_trip"><a href="/trips/<%= @trip.id %>/edit">Edit Trip</a></button>
 
-<button type="button" name="create_list"><a href="/trips/<%= @trip.id %>/lists/new">Create a New List</a></button>
+<button type="button" class="btn btn-default" name="create_list"><a href="/trips/<%= @trip.id %>/lists/new">Create a New List</a></button>
 
 <ul>
   <% @trip.lists.each do |list| %>
-    <li><a href="/trips/<%= list.trip_id %>/lists/<%= list.id %>"><%= list.title %></a></li>
+    <li><a href="/trips/<%= list.trip_id %>/lists/<%= list.id %>" style="color: #ffffff"><%= list.title %></a></li>
   <% end %>
 </ul>
 
 <form action="/trips/<%= @trip.id %>/delete" method="post">
   <input type="hidden" id="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete Trip">
+  <input type="submit" class="btn btn-default" value="Delete Trip">
 </form>

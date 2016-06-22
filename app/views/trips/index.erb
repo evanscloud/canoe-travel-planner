@@ -1,11 +1,11 @@
 <h2>Your Trips</h2>
 
-<button type="button"><a href="/trips/new">Create a New Trip</a></button>
+<button type="button" class="btn btn-default"><a href="/trips/new">Create a New Trip</a></button>
 
 <ul>
   <% @trips.each do |trip| %>
     <% if trip.user_id == session[:user_id] %>
-      <li><a href="/trips/<%= trip.id %>"><%= trip.name %>, <%= trip.location %></a></li>
+      <li><a href="/trips/<%= trip.id %>" style="color: #ffffff"><%= trip.name %>, <%= trip.location %></a></li>
     <% end %>
   <% end %>
 </ul>

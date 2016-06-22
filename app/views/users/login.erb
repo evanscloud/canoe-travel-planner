@@ -3,13 +3,13 @@
 <% unless locals.empty? %>
   <%= message %>
 <% end %>
-<br><br>
+<br>
 <form action="/login" method="post">
   <label for="username">Username: </label>
-  <input type="text" name="username" placeholder="username">
-  <br><br>
+  <input type="text" class="form-control" name="username" placeholder="username">
+  <br>
   <label for="password">Password: </label>
-  <input type="password" name="password" placeholder="password">
-  <br><br>
-  <input type="submit" value="Log-In">
+  <input type="password" class="form-control" name="password" placeholder="password">
+  <br>
+  <input type="submit" class="btn btn-default" value="Log-In">
 </form>
