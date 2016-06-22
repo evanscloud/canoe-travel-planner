@@ -4,8 +4,7 @@
 <% unless locals.empty? %>
   <%= message %>
 <% end %>
-<br><br>
-<button type="button" class="btn btn-default" name="edit_trip"><a href="/trips/<%= @trip.id %>/edit">Edit Trip</a></button>
+<br>
 
 <button type="button" class="btn btn-default" name="create_list"><a href="/trips/<%= @trip.id %>/lists/new">Create a New List</a></button>
 
@@ -17,5 +16,6 @@
 
 <form action="/trips/<%= @trip.id %>/delete" method="post">
   <input type="hidden" id="hidden" name="_method" value="delete">
+  <button type="button" class="btn btn-default" name="edit_trip"><a href="/trips/<%= @trip.id %>/edit">Edit Trip</a></button>
   <input type="submit" class="btn btn-default" value="Delete Trip">
 </form>

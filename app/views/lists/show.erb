@@ -8,11 +8,9 @@
   <%= @list.content %>
 </p>
 
-<button type="button" class="btn btn-default" name="edit_content"><a href="/trips/<%= @list.trip_id %>/lists/<%= @list.id %>/edit">Edit List</a></button>
-
 <form action="/trips/<%= @list.trip_id %>/lists/<%= @list.id %>/delete" method="post">
   <input type="hidden" id="hidden" name="_method" value="delete">
+  <button type="button" class="btn btn-default" name="edit_content"><a href="/trips/<%= @list.trip_id %>/lists/<%= @list.id %>/edit">Edit List</a></button>
   <input type="submit" class="btn btn-default" value="Delete List">
+  <button type="button" class="btn btn-default" name="return_to_trips"><a href="/trips/<%= @list.trip_id %>">Return to Trip</a></button>
 </form>
-
-<button type="button" class="btn btn-default" name="return_to_trips"><a href="/trips/<%= @list.trip_id %>">Return to Trip</a></button>
