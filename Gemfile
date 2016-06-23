@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby '2.2.4'
 
 gem 'sinatra'
 gem 'activerecord', :require => 'active_record'
@@ -9,10 +10,9 @@ gem 'thin'
 gem 'shotgun'
 gem 'bcrypt'
 gem 'erubis'
-gem 'pg'
 
 group :development do
-  # gem 'sqlite3'
+  gem 'sqlite3'
   gem 'pry'
   gem 'tux'
   gem 'rspec'
@@ -21,6 +21,6 @@ group :development do
   gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
 end
 
-# group :production do
-#   gem 'pg'
-# end
+group :production do
+  gem 'pg'
+end
