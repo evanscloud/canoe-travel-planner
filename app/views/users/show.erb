@@ -1,0 +1,8 @@
+<h1> name:  <%= @user.username %></h1>
+
+<h2>Trips:</h2>
+
+<% @trips.each do |trip| %>
+  <%= trip.name %>
+  <%= trip.location %>
+<% end %>
