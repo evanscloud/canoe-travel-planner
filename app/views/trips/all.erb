@@ -2,6 +2,6 @@
 
 <ul>
   <% @trips.each do |trip| %>
-    <li><a href="/trips/<%= trip.id %>" style="color: #ffffff"><%= trip.name %> in <%= trip.location %></a></li>
+    <li><a href="/trips/<%= trip.id %>" style="color: #ffffff"><%= trip.name %> in <%= trip.location %>, by <%= trip.creator %></a></li>
   <% end %>
 </ul>
