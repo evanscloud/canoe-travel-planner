@@ -1,0 +1,7 @@
+<h2>All Trips by Users</h2>
+
+<ul>
+  <% @trips.each do |trip| %>
+    <li><a href="/trips/<%= trip.id %>" style="color: #ffffff"><%= trip.name %> in <%= trip.location %></a></li>
+  <% end %>
+</ul>

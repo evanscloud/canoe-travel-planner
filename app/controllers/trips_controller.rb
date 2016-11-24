@@ -9,6 +9,11 @@ class TripsController < ApplicationController
     end
   end
 
+  get '/trips/all' do
+    @trips = Trip.all
+    erb :'/trips/all'
+  end
+
   get '/trips/new' do
     if is_logged_in?
       erb :'/trips/new'
