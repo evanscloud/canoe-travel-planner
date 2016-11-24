@@ -19,6 +19,7 @@ group :development do
   gem 'capybara'
   gem 'rack-test'
   gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
+  gem 'faker'
 end
 
 group :production do
